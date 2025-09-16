@@ -8,6 +8,8 @@
  * 
  * @author  Michael Kšlling and David J. Barnes
  * @version 2016.02.29
+ * Trevor McQueen 9/15/2025 2 people from different dimension talking under 
+ * a purple moon.
  */
 public class Picture
 {
@@ -16,6 +18,7 @@ public class Picture
     private Triangle hat1;
     private Triangle hat2;
     private Square base;
+    private Circle moon;
     private boolean drawn;
 
     /**
@@ -28,6 +31,7 @@ public class Picture
         hat1 = new Triangle();  
         hat2 = new Triangle();
         base= new Square();
+        moon= new Circle();
         drawn = false;
     }
 
@@ -63,6 +67,11 @@ public class Picture
             hat2.moveVertical(-120);
             hat2.makeVisible();
             
+            moon.changeColor("magenta");
+            moon.moveHorizontal(10);
+            moon.moveVertical(-90);
+            moon.makeVisible();
+            
             drawn = true;
         }
     }
@@ -77,6 +86,7 @@ public class Picture
         hat1.changeColor("black");
         hat2.changeColor("black");
         base.changeColor("black");
+        moon.changeColor("black");
     }
 
     /**
@@ -89,5 +99,6 @@ public class Picture
         hat1.changeColor("red");
         hat2.changeColor("blue");
         base.changeColor("green");
+        moon.changeColor("magenta");
     }
 }
